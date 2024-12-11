@@ -1,0 +1,8 @@
+com.aixohub.portfolio.online.impl.PortfolioReportNetSearchProvider
+com.aixohub.portfolio.online.impl.LeewaySearchProvider
+com.aixohub.portfolio.online.impl.TwelveDataSearchProvider
+com.aixohub.portfolio.online.impl.CoinGeckoSearchProvider
+com.aixohub.portfolio.online.impl.YahooSearchProvider
+com.aixohub.portfolio.online.impl.FinnhubSearchProvider
+com.aixohub.portfolio.online.impl.EODHistoricalDataSearchProvider
+com.aixohub.portfolio.online.impl.DivvyDiarySearchProvider

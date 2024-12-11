@@ -50,9 +50,11 @@ public class ClientPerformanceSnapshot {
     private final ClientSnapshot snapshotStart;
     private final ClientSnapshot snapshotEnd;
     private double irr;
+
     public ClientPerformanceSnapshot(Client client, CurrencyConverter converter, LocalDate startDate, LocalDate endDate) {
         this(client, converter, Interval.of(startDate, endDate));
     }
+
     public ClientPerformanceSnapshot(Client client, CurrencyConverter converter, Interval period) {
         this.client = client;
         this.converter = converter;

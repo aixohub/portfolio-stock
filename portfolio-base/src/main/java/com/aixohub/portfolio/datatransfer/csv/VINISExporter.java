@@ -10,6 +10,28 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.csv.CSVPrinter;
+
+import com.aixohub.portfolio.Messages;
+import com.aixohub.portfolio.model.Client;
+import com.aixohub.portfolio.money.CurrencyConverter;
+import com.aixohub.portfolio.money.CurrencyConverterImpl;
+import com.aixohub.portfolio.money.ExchangeRateProviderFactory;
+import com.aixohub.portfolio.money.MonetaryOperator;
+import com.aixohub.portfolio.money.Money;
+import com.aixohub.portfolio.money.MoneyCollectors;
+import com.aixohub.portfolio.money.MutableMoney;
+import com.aixohub.portfolio.money.Values;
+import com.aixohub.portfolio.snapshot.AccountSnapshot;
+import com.aixohub.portfolio.snapshot.AssetPosition;
+import com.aixohub.portfolio.snapshot.ClientPerformanceSnapshot;
+import com.aixohub.portfolio.snapshot.ClientPerformanceSnapshot.CategoryType;
+import com.aixohub.portfolio.snapshot.ReportingPeriod;
+import com.aixohub.portfolio.snapshot.security.SecurityPerformanceIndicator;
+import com.aixohub.portfolio.snapshot.security.SecurityPerformanceRecord;
+import com.aixohub.portfolio.snapshot.security.SecurityPerformanceSnapshot;
+import com.aixohub.portfolio.util.Interval;
+
 
 /**
  * Special exporter for the VINIS-App
@@ -37,13 +59,13 @@ public class VINISExporter {
         ClientPerformanceSnapshot performanceLastYear = new ClientPerformanceSnapshot(client, converter,
                 periodLastYear.toInterval(LocalDate.now()));
 
-        Money earningsCurrentYear = performanceCurrentYear.getValue(CategoryType.EARNINGS);
-        Money earningsLastYear = performanceLastYear.getValue(CategoryType.EARNINGS);
-        Money earningsAll = performanceAllYears.getValue(CategoryType.EARNINGS);
+        Money earningsCurrentYear = performanceCurrentYear.getValue(ClientPerformanceSnapshot.CategoryType.EARNINGS);
+        Money earningsLastYear = performanceLastYear.getValue(ClientPerformanceSnapshot.CategoryType.EARNINGS);
+        Money earningsAll = performanceAllYears.getValue(ClientPerformanceSnapshot.CategoryType.EARNINGS);
 
-        Money capitalGainsCurrentYear = performanceCurrentYear.getValue(CategoryType.CAPITAL_GAINS);
-        Money capitalGainsLastYear = performanceLastYear.getValue(CategoryType.CAPITAL_GAINS);
-        Money capitalGainsAll = performanceAllYears.getValue(CategoryType.CAPITAL_GAINS);
+        Money capitalGainsCurrentYear = performanceCurrentYear.getValue(ClientPerformanceSnapshot.CategoryType.CAPITAL_GAINS);
+        Money capitalGainsLastYear = performanceLastYear.getValue(ClientPerformanceSnapshot.CategoryType.CAPITAL_GAINS);
+        Money capitalGainsAll = performanceAllYears.getValue(ClientPerformanceSnapshot.CategoryType.CAPITAL_GAINS);
 
         Money realizedCapitalGainsCurrentYear = performanceCurrentYear.getValue(CategoryType.REALIZED_CAPITAL_GAINS);
         Money realizedCapitalGainsLastYear = performanceLastYear.getValue(CategoryType.REALIZED_CAPITAL_GAINS);

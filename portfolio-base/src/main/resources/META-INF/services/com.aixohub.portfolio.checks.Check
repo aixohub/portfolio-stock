@@ -1,0 +1,16 @@
+com.aixohub.portfolio.checks.impl.CrossEntryCheck
+com.aixohub.portfolio.checks.impl.ReferenceAccountCheck
+com.aixohub.portfolio.checks.impl.DividendsAndInterestCheck
+com.aixohub.portfolio.checks.impl.SharesHeldConsistencyCheck
+com.aixohub.portfolio.checks.impl.PortfolioTransactionWithoutSecurityCheck
+com.aixohub.portfolio.checks.impl.NullSecurityPricesCheck
+com.aixohub.portfolio.checks.impl.DanglingAccountsCheck
+com.aixohub.portfolio.checks.impl.MissingCurrencyCheck
+com.aixohub.portfolio.checks.impl.TransactionCurrencyCheck
+com.aixohub.portfolio.checks.impl.FixTaxRefundsCheck
+com.aixohub.portfolio.checks.impl.MissingUUIDCheck
+com.aixohub.portfolio.checks.impl.FixOrphanedSecurtiesCheck
+com.aixohub.portfolio.checks.impl.FixWrongTransfersCheck
+com.aixohub.portfolio.checks.impl.FixDepositsWithSecurityCheck
+com.aixohub.portfolio.checks.impl.NegativeExchangeRateCheck
+com.aixohub.portfolio.checks.impl.MissingTransactionDateCheck

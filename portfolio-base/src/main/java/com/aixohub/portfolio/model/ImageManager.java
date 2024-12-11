@@ -2,8 +2,8 @@ package com.aixohub.portfolio.model;
 
 import com.aixohub.portfolio.model.AttributeType.ImageConverter;
 import com.aixohub.portfolio.util.ImageUtil;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
+
 
 import java.util.HashMap;
 
@@ -20,7 +20,7 @@ public final class ImageManager // NOSONAR
     }
 
     public static Image getDisabledVersion(Image img) {
-        return new Image(null, img, SWT.IMAGE_DISABLE);
+        return img;
     }
 
     /**

@@ -5,6 +5,7 @@ import com.aixohub.portfolio.util.impl.ImageUtilImageIOImpl;
 import com.aixohub.portfolio.util.impl.ImageUtilSWTImpl;
 import org.eclipse.swt.graphics.Image;
 
+
 import java.io.IOException;
 
 public abstract class ImageUtil {

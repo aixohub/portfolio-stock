@@ -1,0 +1,3 @@
+com.aixohub.portfolio.money.impl.ECBExchangeRateProvider
+com.aixohub.portfolio.money.impl.FixedExchangeRateProvider
+com.aixohub.portfolio.money.impl.SecurityBasedExchangeRateProvider
